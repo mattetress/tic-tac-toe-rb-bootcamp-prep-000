@@ -71,3 +71,28 @@ def won?(board)
   end
   false
 end
+
+def full?(board)
+  board.all? do |token|
+    token == "X" || token == "O"
+  end
+end
+
+def draw?(board)
+  if won?(board)
+    false
+  else
+    full?(board)
+  end
+end
+
+def over?(board)
+   won?(board) || draw?(board)
+end
+
+def winner(board)
+  if won?(board)
+    winning = won?(board)
+    board[winning[0]]
+  end
+end
