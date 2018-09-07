@@ -20,3 +20,7 @@ end
 def input_to_index(user_input)
   index = user_input.to_i - 1
 end
+
+def player_move(board, index, token)
+  board[index] = token
+end
