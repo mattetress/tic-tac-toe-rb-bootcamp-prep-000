@@ -53,3 +53,12 @@ def turn_count(board)
   end
   turns_taken
 end
+
+def current_player(board)
+  player = nil
+  if turn_count(board) % 2 == 0 
+    player = "X"
+  else
+    player = "O"
+  end
+end
